@@ -3,24 +3,24 @@ const CONFIG = {
 };
 
 const DOM = {
-  subscribeForm: document.getElementById('subscribe'),
+  newsletter: document.getElementById('newsletter'),
   dialog: document.getElementById('my-dialog'),
   dialogText: document.querySelector('#my-dialog p'),
   dialogClose: document.getElementById('close')
 };
 
-if (DOM.subscribeForm) {
+if (DOM.newsletter) {
   DOM.dialogClose?.addEventListener('click', () => DOM.dialog?.close());
 
-  DOM.subscribeForm.onsubmit = async (e) => {
+  DOM.newsletter.onsubmit = async (e) => {
     e.preventDefault();
     
     const formData = new FormData(e.target);
     const bodyData = new URLSearchParams(formData.entries());
-    const formElements = Array.from(DOM.subscribeForm.elements);
+    const formElements = Array.from(DOM.newsletter.elements);
 
     formElements.forEach(el => el.style.display = 'none');
-    DOM.subscribeForm.classList.add('loader');
+    DOM.newsletter.classList.add('loader');
 
     try {
       const response = await fetch(`https://script.google.com/macros/s/${CONFIG.GOOGLE_SCRIPT_ID}/exec`, {
@@ -37,7 +37,7 @@ if (DOM.subscribeForm) {
 
       if (result.status === 200) {
         DOM.dialogText.innerText = 'E-mail cadastrado com sucesso!';
-        DOM.subscribeForm.reset();
+        DOM.newsletter.reset();
       } else {
         throw new Error(`Status HTTP: ${result.status}`);
       }
@@ -45,7 +45,7 @@ if (DOM.subscribeForm) {
       DOM.dialogText.innerText = `Erro ao cadastrar o e-mail!\n\n${error.message || error}`;
     } finally {
       DOM.dialog?.showModal();
-      DOM.subscribeForm.classList.remove('loader');
+      DOM.newsletter.classList.remove('loader');
       formElements.forEach(el => el.style.display = 'inline');
     }
   };
