@@ -25,7 +25,7 @@
     <link rel="icon" type="image/svg+xml" sizes="any" href="./images/favicon.svg">
     <title>Leandro Sciola - Mensagens Bíblicas | Conselhos | Orações | Testemunhos | Louvores | Experiências Pessoais</title>
     <link rel="preload" href="./styles/main.min.css" as="style">
-    <link rel="preload" href="./scripts/main.min.js" as="script">
+    <link rel="preload" href="./scripts/youtube.min.js" as="script">
     <link rel="stylesheet" href="./styles/main.min.css">
     <!-- <base href="https://leandrosciola.codeberg.page/website/"> -->
   </head>
@@ -91,11 +91,11 @@
               </div>
               <div class="d-flex justify-content-center my-2">
                 <div class="text-center active" id="view-profile">
-                  <a class="btn btn-success" href="javascript:toggleProfile()">Ver perfil</a>
+                  <a class="btn btn-success toggle-profile" href="#">Ver perfil</a>
                 </div>
                 <div class="text-block-width d-none" id="profile">
                   <div class="text-center mb-4">
-                    <a class="btn btn-success" href="javascript:toggleProfile()">Fechar</a>
+                    <a class="btn btn-success toggle-profile" href="#">Fechar</a>
                   </div>
                   <h2>Perfil</h2>
                   <ul class="list-unstyled">
@@ -156,81 +156,6 @@
         <div class="gallery" id="gallery">
           <!-- Vídeos carregados via JS -->
         </div>
-
-        <div class="gallery">
-          <article class="video-card border">
-            <div class="thumb">
-              <img src="./images/thumbnails/1.webp" width="369" height="208" alt="Thumbnail do vídeo 1" loading="lazy">
-              <div class="play-icon"></div>
-              <span class="duration">12:34</span>
-            </div>
-            <div class="video-info">
-              <h2 class="video-title">Como editar vídeos igual um profissional em 2026</h2>
-              <p class="video-meta">152 mil visualizações • há 2 dias</p>
-            </div>
-          </article>
-
-          <article class="video-card border">
-            <div class="thumb">
-              <img src="./images/thumbnails/2.webp" width="369" height="208" alt="Thumbnail do vídeo 2" loading="lazy">
-              <div class="play-icon"></div>
-              <span class="duration">08:17</span>
-            </div>
-            <div class="video-info">
-              <h2 class="video-title">5 setups baratos para gravar com qualidade de cinema</h2>
-              <p class="video-meta">89 mil visualizações • há 1 semana</p>
-            </div>
-          </article>
-
-          <article class="video-card border">
-            <div class="thumb">
-              <img src="./images/thumbnails/3.webp" width="369" height="208" alt="Thumbnail do vídeo 3" loading="lazy">
-              <div class="play-icon"></div>
-              <span class="duration">22:05</span>
-            </div>
-            <div class="video-info">
-              <h2 class="video-title">Tour completo pelo meu estúdio novo</h2>
-              <p class="video-meta">210 mil visualizações • há 3 semanas</p>
-            </div>
-          </article>
-
-          <article class="video-card border">
-            <div class="thumb">
-              <img src="./images/thumbnails/4.webp" width="369" height="208" alt="Thumbnail do vídeo 4" loading="lazy">
-              <div class="play-icon"></div>
-              <span class="duration">15:42</span>
-            </div>
-            <div class="video-info">
-              <h2 class="video-title">Review: Vale a pena essa câmera em 2026?</h2>
-              <p class="video-meta">63 mil visualizações • há 1 mês</p>
-            </div>
-          </article>
-
-          <article class="video-card border">
-            <div class="thumb">
-              <img src="./images/thumbnails/5.webp" width="369" height="208" alt="Thumbnail do vídeo 5" loading="lazy">
-              <div class="play-icon"></div>
-              <span class="duration">05:28</span>
-            </div>
-            <div class="video-info">
-              <h2 class="video-title">3 dicas rápidas para melhorar seu áudio agora</h2>
-              <p class="video-meta">41 mil visualizações • há 2 meses</p>
-            </div>
-          </article>
-
-          <article class="video-card border">
-            <div class="thumb">
-              <img src="./images/thumbnails/6.webp" width="369" height="208" alt="Thumbnail do vídeo 6" loading="lazy">
-              <div class="play-icon"></div>
-              <span class="duration">18:59</span>
-            </div>
-            <div class="video-info">
-              <h2 class="video-title">Como roteirizar vídeos que retêm audiência</h2>
-              <p class="video-meta">98 mil visualizações • há 2 meses</p>
-            </div>
-          </article>
-        </div>
-
         <div class="load-more-wrap">
           <p class="loading-msg" id="loadingMsg" style="display: none;">Carregando vídeos...</p>
           <p class="error-msg" id="errorMsg" style="display: none;"></p>
@@ -369,6 +294,8 @@
         <button class="btn btn-success" id="close">Fechar</button>
       </dialog>
     </footer>
-    <script src="./scripts/main.min.js" defer></script>
+    <script type="module" src="./scripts/youtube.min.js"></script>
+    <script type="module" src="./scripts/navigation.min.js"></script>
+    <script type="module" src="./scripts/newsletter.min.js"></script>
   </body>
 </html>
