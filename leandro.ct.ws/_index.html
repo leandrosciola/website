@@ -24,9 +24,9 @@
     <link rel="canonical" href="https://leandro.ct.ws">
     <link rel="icon" type="image/svg+xml" sizes="any" href="./images/favicon.svg">
     <title>Leandro Sciola - Mensagens Bíblicas | Conselhos | Orações | Testemunhos | Louvores | Experiências Pessoais</title>
-    <link rel="preload" href="./styles/main.min.css" as="style">
+    <link rel="preload" href="./styles/theme.min.css" as="style">
     <link rel="preload" href="./scripts/youtube.min.js" as="script">
-    <link rel="stylesheet" href="./styles/main.min.css">
+    <link rel="stylesheet" href="./styles/theme.min.css">
     <!-- <base href="https://leandrosciola.codeberg.page/website/"> -->
   </head>
   <body style="background-color: #0D0F13">
@@ -91,11 +91,11 @@
               </div>
               <div class="d-flex justify-content-center my-2">
                 <div class="text-center active" id="view-profile">
-                  <a class="btn btn-success toggle-profile" href="#">Ver perfil</a>
+                  <button class="btn btn-dark toggle-profile">Ver perfil</button>
                 </div>
                 <div class="text-block-width d-none" id="profile">
                   <div class="text-center mb-4">
-                    <a class="btn btn-success toggle-profile" href="#">Fechar</a>
+                    <button class="btn btn-dark toggle-profile">Fechar</button>
                   </div>
                   <h2>Perfil</h2>
                   <ul class="list-unstyled">
@@ -126,18 +126,24 @@
               </div>
             </div>
             <div class="d-flex flex-column justify-content-center align-items-center text-center mb-5">
-              <h2>Inscrever-se</h2>
+              <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" clip-rule="evenodd" fill-rule="evenodd" fill="currentColor" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 16 16">
+                  <path d="m9.0067 7.8078-0.496-3.1671c-0.01824-0.11884 0.01504-0.24425 0.10208-0.34183 0.15744-0.17639 0.432-0.19515 0.61249-0.041282l6.6263 5.6412 0.04896 0.049725c0.15264 0.18014 0.12672 0.44785-0.0576 0.59671l-6.6263 5.3585c-0.095681 0.07537-0.22272 0.11227-0.35296 0.08976-0.23488-0.04128-0.39136-0.26145-0.34912-0.49069l0.49408-2.6843c-0.57537-0.065367-1.2029-0.20548-1.8487-0.41783-1.6851-0.55324-3.5188-1.6078-4.9063-3.1377-1.4013-1.5449-2.3504-3.5718-2.2458-6.055 0.03744-0.90445 0.216-1.8683 0.56417-2.8882 0.04288-0.16513 0.18624-0.29554 0.3696-0.31681 0.23808-0.027521 0.45408 0.13886 0.48192 0.37122 0.38176 3.1299 1.617 4.9448 3.144 5.9984 1.3648 0.94198 2.9821 1.2932 4.4391 1.4352z" fill-rule="nonzero" stroke-width=".031635" />
+                </svg>
+              Inscrever-se</h2>
               <p class="text-muted my-2">
                 Receba boletins informativos periódicamente em seu e-mail sobre novidades da galeria.
               </p>
-              <form class="my-4" action="#" method="POST" id="newsletter">
-                <input class="fw-bold" type="email" name="email" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" required>
-                <button class="btn-success text-light" type="submit" aria-label="Enviar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" clip-rule="evenodd" fill-rule="evenodd" fill="currentColor" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 16 16">
-                    <path d="m9.0067 7.8078-0.496-3.1671c-0.01824-0.11884 0.01504-0.24425 0.10208-0.34183 0.15744-0.17639 0.432-0.19515 0.61249-0.041282l6.6263 5.6412 0.04896 0.049725c0.15264 0.18014 0.12672 0.44785-0.0576 0.59671l-6.6263 5.3585c-0.095681 0.07537-0.22272 0.11227-0.35296 0.08976-0.23488-0.04128-0.39136-0.26145-0.34912-0.49069l0.49408-2.6843c-0.57537-0.065367-1.2029-0.20548-1.8487-0.41783-1.6851-0.55324-3.5188-1.6078-4.9063-3.1377-1.4013-1.5449-2.3504-3.5718-2.2458-6.055 0.03744-0.90445 0.216-1.8683 0.56417-2.8882 0.04288-0.16513 0.18624-0.29554 0.3696-0.31681 0.23808-0.027521 0.45408 0.13886 0.48192 0.37122 0.38176 3.1299 1.617 4.9448 3.144 5.9984 1.3648 0.94198 2.9821 1.2932 4.4391 1.4352z" fill-rule="nonzero" stroke-width=".031635" />
-                  </svg>
-                </button>
-              </form>
+              <nav>
+                <form class="my-4" action="#" method="POST" id="newsletter">
+                  <input type="email" name="email" placeholder="Digite seu e-mail" aria-label="Digite seu e-mail" required="required">
+                  <button type="submit" aria-label="Enviar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg>
+                  </button>
+                </form>
+              </nav>
             </div>
           </div>
         </div>
@@ -159,7 +165,7 @@
         <div class="load-more-wrap">
           <p class="loading-msg" id="loadingMsg" style="display: none;">Carregando vídeos...</p>
           <p class="error-msg" id="errorMsg" style="display: none;"></p>
-          <button class="btn-load-more border" id="loadMoreBtn">Ver mais vídeos</button>
+          <button class="btn btn-dark btn-load-more border" id="loadMoreBtn">Ver mais vídeos</button>
         </div>
       </div>
     </main>
@@ -218,7 +224,7 @@
         <ul class="list-unstyled mt-2">
           <li>A Política de Privacidade do site <a href="https://leandro.ct.ws" title="https://leandro.ct.ws">https://leandro.ct.ws</a> foi criada em conformidade com as leis de proteção de dados aplicáveis, incluindo o Regulamento Geral de Proteção de Dados (GDPR) da União Europeia, afirmando nosso compromisso com a segurança e privacidade das informações coletadas dos usuários que acessam nosso site. Esta Política de Privacidade descreve o que coletamos, como usamos e protegemos suas informações pessoais.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Informações que coletamos</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Informações que coletamos</li>
           <li>Podemos coletar as seguintes informações quando você acessa nosso site:</li>
 
           <li>1. Informações de identidade pessoal: Nome;</li>
@@ -226,19 +232,19 @@
           <li>3. Informações de log: Endereço IP, sistema operacional, tipo de navegador, versão do navegador, páginas visitadas, data e hora da visita, tempo de permanência em cada página, identificadores de dispositivo e recursos utilizados no site;</li>
           <li>4. Informações de contato: Endereço de e-mail e possivelmente número de telefone.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Como usamos suas informações</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Como usamos suas informações</li>
           <li>Usamos suas informações para:</li>
           <li>1. Comunicar-nos com você: Responder às suas perguntas, enviar notificações sobre novas atualizações e outras informações relevantes;</li>
           <li>2. Lembrar preferências: Personalizar a experiência de navegação em nosso site;</li>
           <li>3. Analisar métricas: Entender melhor como nosso site está sendo utilizado, para que possamos aprimorá-lo continuamente;</li>
           <li>4. Gerenciar doações: Para identificar doações efetuadas.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Como protegemos suas informações</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Como protegemos suas informações</li>
           <li>Não compartilhamos informações pessoais com terceiros sem o seu consentimento prévio, exceto em determinadas circunstâncias, como:</li>
           <li>1. Prestadores de serviços: Podemos contratar prestadores de serviços terceirizados para executar determinadas funções em nosso nome, como contabilidade, análise de dados, processamento de pagamentos, comunicações, marketing e software em nuvem. Esses prestadores de serviços têm acesso às suas informações pessoais apenas para executar as funções especificadas e são obrigados a protegê-las de acordo com esta Política de Privacidade;</li>
           <li>2. Conformidade legal: Podemos divulgar suas informações se exigido por lei e regulamentação ou para cooperar com as autoridades policiais, se necessário.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Cookies</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Cookies</li>
           <li>Cookies não são programas, não roubam dados do seu dispositivo e não comprometem a segurança da sua navegação. Cookies são pequenos arquivos de texto que os sites enviam ao seu navegador para lembrar suas preferências e personalizar sua experiência de navegação.</li>
           <li>Usamos cookies para o funcionamento básico dos recursos do site. Você tem o direito de desativar os cookies nas configurações do seu navegador. No entanto, ao desativar os cookies, os recursos podem não funcionar corretamente.</li>
           <li>Categorias de cookies:</li>
@@ -247,13 +253,13 @@
           <li>3. Cookies de funcionalidade: Cookies que permitem que o site lembre suas preferências, como idioma, bem como outras personalizações;</li>
           <li>4. Cookies de publicidade: Cookies usados ​​para exibir anúncios relevantes para você e definir identificadores usados ​​em estratégias de marketing de afiliados.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Links para sites e aplicativos de terceiros</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Links para sites e aplicativos de terceiros</li>
           <li>Nosso site pode conter links para sites e aplicativos de terceiros que não são operados por nós. Portanto, não nos responsabilizamos pelas respectivas Políticas de Privacidade. Recomendamos que os usuários revisem suas respectivas Políticas de Privacidade antes de fornecer quaisquer informações pessoais.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Segurança</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Segurança</li>
           <li>Implementamos medidas de segurança físicas, técnicas e administrativas para proteger suas informações pessoais contra acesso, uso, modificação ou divulgação não autorizados. No entanto, nenhum método de transmissão pela internet ou método de armazenamento eletrônico é totalmente seguro. Portanto, embora nos esforcemos para proteger suas informações pessoais, não podemos garantir sua segurança absoluta.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Seus direitos</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Seus direitos</li>
           <li>Você tem o direito de:</li>
           <li>1. Acessar suas informações pessoais;</li>
           <li>2. Corrigir informações imprecisas;</li>
@@ -261,23 +267,23 @@
           <li>4. Excluir suas informações;</li>
           <li>5. Cancelar o recebimento de quaisquer comunicações de marketing.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Seus compromissos</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Seus compromissos</li>
           <li>Você concorda em:</li>
           <li>1. Fazer uso adequado dos serviços e recursos oferecidos pelo site;</li>
           <li>2. Não divulgar conteúdo ilegal de qualquer natureza, contrário à boa-fé e aos direitos humanos;</li>
           <li>3. Não praticar atos ilícitos em nossos sistemas com o objetivo de causar danos ou apropriar-se indevidamente de dados;</li>
           <li>4. Não utilizar quaisquer elementos gráficos, textos, códigos-fonte e demais arquivos que compõem o site em outros sites sem a devida autorização.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Menores de 14 anos de idade</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Menores de 14 anos de idade</li>
           <li>Este site não se destina a crianças. Não coletamos intencionalmente informações pessoais de menores de 14 anos. Se você for pai/mãe ou responsável e tomar conhecimento de que seu filho nos forneceu informações pessoais, entre em contato conosco para que possamos tomar as medidas necessárias para excluí-las.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Alterações na Política de Privacidade</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Alterações na Política de Privacidade</li>
           <li>Podemos atualizar esta Política de Privacidade ocasionalmente. Publicaremos as alterações em nosso site e indicaremos a data da última atualização. Recomendamos que você revise esta Política de Privacidade periodicamente para se manter informado sobre nossas práticas de coleta, uso e proteção de dados.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Aceitação desta Política de Privacidade</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Aceitação desta Política de Privacidade</li>
           <li>O uso contínuo de nosso site será considerado aceitação de nossa Política de Privacidade.</li>
 
-          <li class="bg-secondary-subtle fw-bold rounded my-2 p-2">Contato</li>
+          <li class="bg-secondary fw-bold rounded my-2 p-2">Contato</li>
           <li>Esperamos que esta Política de Privacidade tenha esclarecido nossas práticas em relação às informações pessoais, mas se você ainda tiver dúvidas, entre em contato conosco pelo e-mail: <a href="mailto:leandrosciola@gmail.com" title="E-mail">leandrosciola@gmail.com</a>.</li>
 
           <li class="list-group-item border-0 border-top mt-4 pt-4">Em vigor a partir de: <i>10 de Abril de 2026</i></li>

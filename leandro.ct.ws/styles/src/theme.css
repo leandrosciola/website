@@ -3,7 +3,7 @@
   --bg-card: #161A20;
   --bg-hover: #1F252E;
   --text-muted: #9AA4B2;
-  --secondary-subtle: #323232;
+  --secondary: #323232;
   --light: #E5E5E5;
   --success: #278157;
   --danger: #FF0033;
@@ -92,8 +92,8 @@ body {
 .bg-danger {
   background-color: var(--danger) !important;
 }
-.bg-secondary-subtle {
-  background-color: var(--secondary-subtle) !important;
+.bg-secondary {
+  background-color: var(--secondary) !important;
 }
 .bg-success {
   background-color: var(--success) !important;
@@ -108,11 +108,11 @@ body {
   overflow: hidden !important;
 }
 .btn {
-  padding: 12px 24px;
+  padding: 14px 32px;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  border: none;
+  border: 1px solid;
   outline: none;
   cursor: pointer;
   font-size: 1rem;
@@ -124,6 +124,23 @@ body {
 .btn-success:active,
 .btn-success:hover {
   background-color: #26A269 !important;
+}
+.btn-secondary {
+  background: var(--secondary) !important;
+  color: #FFFFFF;
+}
+.btn-secondary:active,
+.btn-secondary:hover {
+  background-color: #424242 !important;
+}
+.btn-dark {
+  background: var(--bg-card);
+  color: var(--light);
+  border-color: #3A424E;
+}
+.btn-dark:active,
+.btn-dark:hover {
+  background: var(--bg-hover);
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
   font-weight: normal !important;
@@ -360,18 +377,9 @@ main {
   gap: 16px;
 }
 .btn-load-more {
-  background: var(--bg-card);
-  color: var(--light);
-  padding: 14px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
   transition: all 0.2s;
 }
 .btn-load-more:hover:not(:disabled) {
-  background: var(--bg-hover);
-  border-color: #3A424E;
   transform: translateY(-2px);
 }
 .btn-load-more:disabled {
