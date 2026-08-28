@@ -46,3 +46,8 @@ buttons.forEach((button) => {
     toggleProfile();
   });
 });
+
+document.querySelector('.privacy-policy').addEventListener('click', (event) => {
+  event.preventDefault();
+  showContent('privacy-policy');
+});
