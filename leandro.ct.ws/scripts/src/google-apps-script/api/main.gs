@@ -12,15 +12,15 @@ function doGet(e) {
 }
 
 function doPost(e) {
-    return newsletter(e);
+  return newsletter(e);
 }
 
 function printJSON(data) {
-    return ContentService
-    .createTextOutput(JSON.stringify(data))
-    .setMimeType(ContentService.MimeType.JSON);
+  return ContentService
+  .createTextOutput(JSON.stringify(data))
+  .setMimeType(ContentService.MimeType.JSON);
 }
 
 function printHTML(data) {
-    return HtmlService.createHtmlOutput(data);
+  return HtmlService.createHtmlOutput(data);
 }

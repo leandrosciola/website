@@ -1,5 +1,5 @@
 const CONFIG = {
-  GOOGLE_SCRIPT_ID: 'AKfycbzZlY7YzNS7dA-lpLlMh02jz8C7ys2X9aM-Nz9ZHLD9BWpnFA2jnH1qeeqxPOXjJBNk'
+  GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyBfYSf2cCa6nZyTQXfwhQAL0zHc9WRz40FGUpZ1jeLV7oWzcCtJRWG1PHyh-3NmV-S/exec'
 };
 
 const DOM = {
@@ -23,7 +23,7 @@ if (DOM.newsletter) {
     DOM.newsletter.classList.add('loader');
 
     try {
-      const response = await fetch(`https://script.google.com/macros/s/${CONFIG.GOOGLE_SCRIPT_ID}/exec`, {
+      const response = await fetch(CONFIG.GOOGLE_SCRIPT_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: bodyData

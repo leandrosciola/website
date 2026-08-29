@@ -1,35 +1,27 @@
 function newsletter(e) {
-    var data = [];
-    var json = e.parameter;
-    /* -------------------------------------
-      Add the fields in the array in order
-    ------------------------------------- */
-    data.push([
-      json["email"]
-    ]);
-    /* -------------------------------------
-      Check the data
-    ------------------------------------- */
-    check(data);
-    /* -------------------------------------
-      Add data to worksheet
-    ------------------------------------- */
-    insert(data);
-    /* -------------------------------------
-      Returns response in JSON format
-    ------------------------------------- */
-    return printJSON({status: 200});
+  var data = [];
+  var json = e.parameter;
+
+  data.push([
+    json["email"]
+  ]);
+
+  check(data);
+  insert(data);
+  return printJSON({status: 200});
 }
 
 function insert(data) {
-    var lastRow = SpreadsheetApp.getActiveSheet().getLastRow();
-    SpreadsheetApp.getActiveSheet().getRange(lastRow + 1, 1, data.length, data[0].length).setValues(data);
+  var spreadsheet = SpreadsheetApp.openById('1y6AFNIX35Gyxgs4YKft0RQsNE6QnWBWn7OqLLhefRZY');
+  var sheet = spreadsheet.getSheetByName('Sheet1');
+  var lastRow = sheet.getLastRow();
+  sheet.getRange(lastRow + 1, 1, data.length, data[0].length).setValues(data);
 }
 
 function check(data) {
-    data[0].forEach(function (item, index) {
-        if (item === "null") {
-            data[0][index] = "";
-        }
-    });
+  data[0].forEach(function (item, index) {
+    if (item === "null") {
+      data[0][index] = "";
+    }
+  });
 }
