@@ -1,4 +1,4 @@
-function doGet(e) {
+function youtube(e) {
   return sampleData(); // Dev - Sample data
 
   const API_KEY = 'SUA_CHAVE_API_AQUI'; 
@@ -28,7 +28,7 @@ function doGet(e) {
       throw new Error("Erro na API do YouTube (Playlist): " + playlistData.error.message);
     }
     if (!playlistData.items || playlistData.items.length === 0) {
-      return JsonResponse({ items: [], nextPageToken: '' });
+      return printJSON({ items: [], nextPageToken: '' });
     }
 
     const videoIds = playlistData.items.map(item => item.snippet.resourceId.videoId).join(',');
@@ -76,15 +76,15 @@ function doGet(e) {
       items: finalItems
     };
 
-    return JsonResponse(responsePayload);
+    return printJSON(responsePayload);
                          
   } catch (error) {
-    return JsonResponse({ error: true, message: error.toString() });
+    return printJSON({ error: true, message: error.toString() });
   }
 }
 
 function sampleData() {
-  return JsonResponse({
+  return printJSON({
     "nextPageToken": "CAYQAA",
     "items": [
       {
@@ -131,9 +131,4 @@ function sampleData() {
       }
     ]
   });
-}
-
-function JsonResponse(obj) {
-  return ContentService.createTextOutput(JSON.stringify(obj))
-                       .setMimeType(ContentService.MimeType.JSON);
 }

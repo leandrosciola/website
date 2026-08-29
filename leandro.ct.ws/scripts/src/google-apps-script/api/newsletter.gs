@@ -1,4 +1,4 @@
-function doPost(e) {
+function newsletter(e) {
     var data = [];
     var json = e.parameter;
     /* -------------------------------------
@@ -24,14 +24,6 @@ function doPost(e) {
 function insert(data) {
     var lastRow = SpreadsheetApp.getActiveSheet().getLastRow();
     SpreadsheetApp.getActiveSheet().getRange(lastRow + 1, 1, data.length, data[0].length).setValues(data);
-}
-
-function printJSON(data) {
-    return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON);
-}
-
-function printHTML(data) {
-    return HtmlService.createHtmlOutput(data);
 }
 
 function check(data) {

@@ -1,6 +1,6 @@
 const CONFIG = {
   MAX_RESULTS: 6,
-  GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyBfYSf2cCa6nZyTQXfwhQAL0zHc9WRz40FGUpZ1jeLV7oWzcCtJRWG1PHyh-3NmV-S/exec'
+  GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyBfYSf2cCa6nZyTQXfwhQAL0zHc9WRz40FGUpZ1jeLV7oWzcCtJRWG1PHyh-3NmV-S/exec?service=youtube'
 };
 
 const DOM = {
@@ -116,7 +116,7 @@ async function fetchVideos(pageToken = '') {
       DOM.loadMoreBtn.disabled = true;
     }
 
-    const response = await fetch(`${CONFIG.GOOGLE_SCRIPT_URL}?pageToken=${pageToken}`);
+    const response = await fetch(`${CONFIG.GOOGLE_SCRIPT_URL}&pageToken=${pageToken}`);
     const data = await response.json();
 
     if (data.error) throw new Error(data.message);
