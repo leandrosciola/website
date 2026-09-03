@@ -32,9 +32,6 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-.h-300 {
-  height: 300px !important;
-}
 .me-2 {
   margin-right: 8px !important;
 }
@@ -212,11 +209,19 @@ nav a:hover {
   color: var(--light);
 }
 /* Banner */
+.banner {
+  height: 300px;
+  background-color: #D1C3B8;
+  background-image: url('../images/studio.webp');
+  background-size: cover;
+  background-position: center;
+}
 .hero {
   position: relative;
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-top: solid #D1C3B8 1px;
 }
 .hero::after {
   content: "";
