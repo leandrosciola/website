@@ -36,17 +36,18 @@ if (DOM.newsletter) {
       const result = await response.json();
 
       if (result.status === 200) {
-        DOM.dialogText.innerText = 'E-mail cadastrado com sucesso!';
         DOM.newsletter.reset();
+        DOM.newsletter.innerText = 'E-mail cadastrado com sucesso!';
+        DOM.newsletter.classList.add('rounded', 'bg-success', 'text-light', 'fw-bold', 'justify-content-center', 'p-2');
       } else {
         throw new Error(`Status HTTP: ${result.status}`);
       }
     } catch (error) {
       DOM.dialogText.innerText = `Erro ao cadastrar o e-mail!\n\n${error.message || error}`;
-    } finally {
       DOM.dialog?.showModal();
-      DOM.newsletter.classList.remove('loader');
       formElements.forEach(el => el.style.display = 'inline');
+    } finally {
+      DOM.newsletter.classList.remove('loader');
     }
   };
 }
