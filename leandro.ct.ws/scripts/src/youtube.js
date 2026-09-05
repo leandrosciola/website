@@ -7,7 +7,7 @@ const DOM = {
   gallery: document.getElementById('gallery'),
   loadMoreBtn: document.getElementById('loadMoreBtn'),
   loadingMsg: document.getElementById('loadingMsg'),
-  errorMsg: document.getElementById('errorMsg'),
+  errorMsg: document.getElementById('errorMsg')
 };
 
 let nextPageToken = '';
@@ -98,6 +98,9 @@ function renderGallery(videos) {
       </div>
     `;
     */
+    card.addEventListener('click', () => {
+      dialog('Clicado');
+    });
     DOM.gallery.appendChild(card);
   });
 }

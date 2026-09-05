@@ -3,15 +3,10 @@ const CONFIG = {
 };
 
 const DOM = {
-  newsletter: document.getElementById('newsletter'),
-  dialog: document.querySelector('dialog'),
-  dialogText: document.querySelector('dialog p'),
-  dialogClose: document.querySelector('dialog button')
+  newsletter: document.getElementById('newsletter')
 };
 
 if (DOM.newsletter) {
-  DOM.dialogClose?.addEventListener('click', () => DOM.dialog?.close());
-
   DOM.newsletter.onsubmit = async (e) => {
     e.preventDefault();
     
@@ -43,8 +38,7 @@ if (DOM.newsletter) {
         throw new Error(`Status HTTP: ${result.status}`);
       }
     } catch (error) {
-      DOM.dialogText.innerText = `Erro ao cadastrar o e-mail!\n\n${error.message || error}`;
-      DOM.dialog?.showModal();
+      dialog(`Erro ao cadastrar o e-mail!\n\n${error.message || error}`);
       formElements.forEach(el => el.style.display = 'inline');
     } finally {
       DOM.newsletter.classList.remove('loader');
