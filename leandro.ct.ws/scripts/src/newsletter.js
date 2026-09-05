@@ -4,9 +4,9 @@ const CONFIG = {
 
 const DOM = {
   newsletter: document.getElementById('newsletter'),
-  dialog: document.getElementById('my-dialog'),
-  dialogText: document.querySelector('#my-dialog p'),
-  dialogClose: document.getElementById('close')
+  dialog: document.querySelector('dialog'),
+  dialogText: document.querySelector('dialog p'),
+  dialogClose: document.querySelector('dialog button')
 };
 
 if (DOM.newsletter) {
