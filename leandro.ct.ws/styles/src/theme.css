@@ -39,6 +39,9 @@ body {
 .min-vh-100 {
   min-height: 100vh !important;
 }
+.m-0 {
+  margin: 0 !important;
+}
 .me-2 {
   margin-right: 8px !important;
 }
@@ -394,7 +397,7 @@ main {
 /* YouTube */
 .youtube {
   width: auto;
-  height: calc(100vh - 145px);
+  height: calc(100vh - 50px);
   aspect-ratio: 16 / 9;
 }
 /* Footer */
@@ -558,21 +561,29 @@ dialog {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1px;
-  border-radius: 5px;
+  border-radius: 12px;
   border: 0;
   min-width: 300px;
   text-align: center;
 }
 dialog button {
-  padding: 10px;
   margin-top: 24px;
+  padding: 10px;
   background: #CCCCCC;
+}
+dialog button::after {
+  content: 'Fechar';
+}
+dialog.btn-close button {
+  margin-top: 0;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+dialog.btn-close button::after {
+  content: 'X';
+  color: var(--light);
 }
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.9);
-}
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
 }

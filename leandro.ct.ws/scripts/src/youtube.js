@@ -111,8 +111,8 @@ function renderGallery(videos) {
     `;
     */
     card.addEventListener('click', (e) => {
-      const classes = ['bg-dark', 'pb-4'];
-      dialog(`<iframe class="youtube" src="https://www.youtube.com/embed/${video.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`, classes);
+      const classes = ['bg-dark', 'btn-close'];
+      dialog(`<iframe class="youtube m-0 p-0" src="https://www.youtube.com/embed/${video.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`, classes);
     });
     DOM.gallery.appendChild(card);
   });
