@@ -1,3 +1,16 @@
+/*
+ * Low quality
+ * https://img.youtube.com/vi/[video-id]/sddefault.jpg
+ *
+ * Medium quality
+ * https://img.youtube.com/vi/[video-id]/mqdefault.jpg
+ *
+ * High quality
+ * http://img.youtube.com/vi/[video-id]/hqdefault.jpg
+ *
+ * Maximum resolution
+ * http://img.youtube.com/vi/[video-id]/maxresdefault.jpg
+ */
 const CONFIG = {
   MAX_RESULTS: 6,
   GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyBfYSf2cCa6nZyTQXfwhQAL0zHc9WRz40FGUpZ1jeLV7oWzcCtJRWG1PHyh-3NmV-S/exec?service=youtube'
@@ -70,8 +83,6 @@ function renderGallery(videos) {
 
   videos.forEach(video => {
     const card = document.createElement('article');
-    card.classList.add('video-card', 'border'); 
-
     card.innerHTML = `
       <div class="thumb">
         <img src="./images/thumbnails/${video.id}.webp" width="369" height="208" alt="${video.title}" loading="lazy">
@@ -83,6 +94,7 @@ function renderGallery(videos) {
         <p class="video-meta">${timeAgo(video.publishedAt)}</p>
       </div>
     `;
+    card.classList.add('video-card', 'border'); 
     /*
     card.innerHTML = `
       <div class="thumb">
@@ -98,8 +110,9 @@ function renderGallery(videos) {
       </div>
     `;
     */
-    card.addEventListener('click', () => {
-      dialog('Clicado');
+    card.addEventListener('click', (e) => {
+      const classes = ['bg-dark', 'pb-4'];
+      dialog(`<iframe class="youtube" src="https://www.youtube.com/embed/${video.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`, classes);
     });
     DOM.gallery.appendChild(card);
   });

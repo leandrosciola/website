@@ -38,7 +38,7 @@ if (DOM.newsletter) {
         throw new Error(`Status HTTP: ${result.status}`);
       }
     } catch (error) {
-      dialog(`Erro ao cadastrar o e-mail!\n\n${error.message || error}`);
+      dialog(`ERROR!<p>${error.message || error}</p>`, ['p-4']);
       formElements.forEach(el => el.style.display = 'inline');
     } finally {
       DOM.newsletter.classList.remove('loader');

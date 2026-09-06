@@ -24,14 +24,20 @@ body {
   display: flex;
   flex-direction: column;
 }
-.min-vh-100 {
-  min-height: 100vh !important;
-}
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+.w-100 {
+  width: 100% !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.min-vh-100 {
+  min-height: 100vh !important;
 }
 .me-2 {
   margin-right: 8px !important;
@@ -60,8 +66,17 @@ body {
 .my-5 {
   margin-bottom: 48px !important;
 }
+.p-0 {
+  padding: 0 !important;
+}
 .p-2 {
   padding: 8px !important;
+}
+.p-4 {
+  padding: 24px !important;
+}
+.pb-4 {
+  padding-bottom: 24px !important;
 }
 .d-none {
   display: none !important;
@@ -86,6 +101,9 @@ body {
 }
 .text-muted {
   color: var(--text-muted) !important;
+}
+.bg-dark {
+  background-color: var(--dark) !important;
 }
 .bg-light {
   background-color: var(--light) !important;
@@ -373,6 +391,12 @@ main {
 .error-msg {
   color: #FF4D6D;
 }
+/* YouTube */
+.youtube {
+  width: auto;
+  height: calc(100vh - 145px);
+  aspect-ratio: 16 / 9;
+}
 /* Footer */
 footer {
   background: #0A0C0F;
@@ -455,6 +479,9 @@ a {
  .text-sm-center {
     text-align: center;
   }
+  .youtube {
+    height: auto;
+  }
 }
 @media (max-width: 640px) {
  .justify-content {
@@ -530,23 +557,19 @@ dialog {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 48px;
+  padding: 1px;
   border-radius: 5px;
   border: 0;
   min-width: 300px;
   text-align: center;
-  &::backdrop {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  &[open], 
-  &::backdrop {
-    animation: show 500ms ease;
-  }
 }
 dialog button {
   padding: 10px;
   margin-top: 24px;
   background: #CCCCCC;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 @keyframes show {
   0% {

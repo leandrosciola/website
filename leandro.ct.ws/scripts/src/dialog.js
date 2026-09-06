@@ -1,14 +1,18 @@
 const DOM = {
   dialog: document.querySelector('dialog'),
-  dialogText: document.querySelector('dialog p'),
-  dialogClose: document.querySelector('dialog button')
+  dialogDiv: document.querySelector('dialog div'),
+  dialogButton: document.querySelector('dialog button')
 };
 
 if (DOM.dialog) {
-  DOM.dialogClose?.addEventListener('click', () => DOM.dialog?.close());
+  DOM.dialogButton?.addEventListener('click', () => DOM.dialog?.close());
 }
 
-window.dialog = (data) => {
-  DOM.dialogText.innerText = data;
+window.dialog = (data, classes = ['bg-light']) => {
+  DOM.dialog.className = '';
+  if (Array.isArray(classes) && classes.length > 0) {
+    DOM.dialog?.classList.add(...classes);
+  }
+  DOM.dialogDiv.innerHTML = data;
   DOM.dialog?.showModal();
 };
