@@ -8,7 +8,7 @@ if (DOM.dialog) {
   DOM.dialogButton?.addEventListener('click', () => DOM.dialog?.close());
 }
 
-window.dialog = (data, classes = ['bg-light']) => {
+window.dialog = (data, classes = []) => {
   DOM.dialog.className = '';
   if (Array.isArray(classes) && classes.length > 0) {
     DOM.dialog?.classList.add(...classes);

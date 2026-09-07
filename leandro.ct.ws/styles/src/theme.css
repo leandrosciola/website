@@ -397,8 +397,9 @@ main {
 /* YouTube */
 .youtube {
   width: auto;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 40px);
   aspect-ratio: 16 / 9;
+  border-radius: 12px;
 }
 /* Footer */
 footer {
@@ -561,15 +562,16 @@ dialog {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1px;
+  border: none;
   border-radius: 12px;
-  border: 0;
   min-width: 300px;
+  overflow: hidden;
   text-align: center;
+  background-color: transparent;
 }
 dialog button {
   margin-top: 24px;
   padding: 10px;
-  background: #CCCCCC;
 }
 dialog button::after {
   content: 'Fechar';
