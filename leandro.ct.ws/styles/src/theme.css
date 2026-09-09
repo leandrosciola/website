@@ -540,13 +540,16 @@ dialog button::after {
 }
 dialog.btn-close button {
   margin-top: 0;
+  padding: 12px 16px 12px 16px;
   position: absolute;
   top: 4px;
   right: 4px;
+  border: none;
 }
 dialog.btn-close button::after {
   content: 'X';
   color: var(--light);
+  font-size: 20px;
 }
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.9);
@@ -574,9 +577,10 @@ dialog::backdrop {
   }
   dialog.btn-close button {
     margin-top: 0;
+    padding: 10px 14px 10px 14px;
     position: absolute;
     top: -50px;
-    right: 4px;
+    right: 0;
   }
 }
 @media (max-width: 640px) {
