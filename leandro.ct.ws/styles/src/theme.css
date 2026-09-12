@@ -582,8 +582,8 @@ dialog::backdrop {
     margin-top: 0;
     padding: 10px 14px 10px 14px;
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: -48px;
+    right: 5px;
   }
 }
 @media (max-width: 640px) {
