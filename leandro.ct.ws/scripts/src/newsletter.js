@@ -38,7 +38,7 @@ if (DOM.newsletter) {
         throw new Error(`Status HTTP: ${result.status}`);
       }
     } catch (error) {
-      dialog(`ERROR!<p>${error.message || error}</p>`, ['bg-light', 'p-4']);
+      dialog(`ERROR!<p>${error.message || error}</p>`, ['rounded', 'bg-light', 'p-4']);
       formElements.forEach(el => el.style.display = 'inline');
     } finally {
       DOM.newsletter.classList.remove('loader');
