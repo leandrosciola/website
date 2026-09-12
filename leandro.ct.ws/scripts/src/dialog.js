@@ -5,7 +5,12 @@ const DOM = {
 };
 
 if (DOM.dialog) {
-  DOM.dialogButton?.addEventListener('click', () => DOM.dialog?.close());
+  DOM.dialogButton?.addEventListener('click', () => {
+    DOM.dialog?.close();
+  });
+  DOM.dialog?.addEventListener('close', () => {
+    document.body.style.overflow = 'visible';
+  });
 }
 
 window.dialog = (data, classes = []) => {
@@ -15,4 +20,5 @@ window.dialog = (data, classes = []) => {
   }
   DOM.dialogDiv.innerHTML = data;
   DOM.dialog?.showModal();
+  document.body.style.overflow = 'hidden';
 };
