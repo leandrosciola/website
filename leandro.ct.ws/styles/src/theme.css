@@ -573,15 +573,6 @@ dialog::backdrop {
  .text-sm-center {
     text-align: center;
   }
-  .youtube {
-    height: 250px;
-  }
-  dialog[open] {
-    min-width: 90%;
-  }
-  dialog.btn-close button {
-    top: -52px;
-  }
 }
 @media (max-width: 640px) {
  .justify-content {
@@ -605,5 +596,32 @@ dialog::backdrop {
   }
  .hero h1 {
     font-size: 2rem;
+  }
+}
+@media (max-width: 575px) and (orientation: portrait) {
+  .youtube {
+    height: 300px;
+  }
+  dialog[open] {
+    min-width: 90%;
+  }
+  dialog.btn-close button {
+    top: -52px;
+  }
+}
+@media (min-width: 576px) and (orientation: portrait) {
+  .youtube {
+    height: 500px;
+  }
+  dialog[open] {
+    min-width: 90%;
+  }
+  dialog.btn-close button {
+    top: -52px;
+  }
+}
+@media (min-width: 768px) and (orientation: portrait) {
+  .youtube {
+    height: 700px;
   }
 }
