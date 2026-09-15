@@ -573,6 +573,9 @@ dialog::backdrop {
  .text-sm-center {
     text-align: center;
   }
+  dialog[open] {
+    min-width: 90%;
+  }
 }
 @media (max-width: 640px) {
  .justify-content {
@@ -603,7 +606,7 @@ dialog::backdrop {
     height: 300px;
   }
   dialog[open] {
-    min-width: 90%;
+    min-width: 80%;
   }
   dialog.btn-close button {
     top: -52px;
@@ -614,7 +617,7 @@ dialog::backdrop {
     height: 500px;
   }
   dialog[open] {
-    min-width: 90%;
+    min-width: 70%;
   }
   dialog.btn-close button {
     top: -52px;
