@@ -10,6 +10,7 @@ if (DOM.dialog) {
   });
   DOM.dialog?.addEventListener('close', () => {
     document.body.style.overflow = 'visible';
+    DOM.dialogDiv.innerHTML = '';
   });
 }
 
