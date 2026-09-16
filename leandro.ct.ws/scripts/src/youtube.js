@@ -52,6 +52,19 @@ const formatViews = (views) => {
   return formatter.format(num).toLowerCase();
 };
 
+const formatDate = (publishedAt) => {
+  const date = new Date(publishedAt);
+  const day = String(date.getUTCDate()).padStart(2, '0');
+  //const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const month = [
+      "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+      "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+  ];
+  const year = date.getUTCFullYear();
+  //return `${day}/${month}/${year}`;
+  return `${day} de ${month[date.getUTCMonth()]} de ${year}`;
+};
+
 const timeAgo = (dateString) => {
   const date = new Date(dateString);
   const seconds = Math.floor((new Date() - date) / 1000);
@@ -91,7 +104,7 @@ function renderGallery(videos) {
       </div>
       <div class="video-info">
         <h2 class="video-title">${video.title}</h2>
-        <p class="video-meta">${timeAgo(video.publishedAt)}</p>
+        <p class="video-meta">${formatDate(video.publishedAt)}</p>
       </div>
     `;
     card.classList.add('video-card', 'border'); 
