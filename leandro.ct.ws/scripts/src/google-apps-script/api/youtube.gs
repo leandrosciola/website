@@ -88,46 +88,109 @@ function sampleData() {
     "nextPageToken": "CAYQAA",
     "items": [
       {
-        "id": "v1_video_id",
+        "id": "HuGAiGfKqW0",
         "title": "Como Programar em Google Apps Script para Iniciantes",
         "thumbnail": "https://ytimg.com",
         "publishedAt": "2026-08-25T14:00:00Z",
         "duration": "PT12M45S"
       },
       {
-        "id": "v2_video_id",
+        "id": "x0692zj9jsI",
         "title": "Consumindo a API do YouTube v3 sem Mistérios",
         "thumbnail": "https://ytimg.com",
         "publishedAt": "2026-08-20T18:30:00Z",
         "duration": "PT8M20S"
       },
       {
-        "id": "v3_video_id",
+        "id": "rPq7ITrWFvY",
         "title": "Dicas de Produtividade no Google Workspace",
         "thumbnail": "https://ytimg.com",
         "publishedAt": "2026-08-15T11:15:00Z",
         "duration": "PT15M02S"
       },
       {
-        "id": "v4_video_id",
+        "id": "Nm5e9ok8dIg",
         "title": "Criando uma API REST com Apps Script em 10 Minutos",
         "thumbnail": "https://ytimg.com",
         "publishedAt": "2026-08-10T09:00:00Z",
         "duration": "PT10M11S"
       },
       {
-        "id": "v5_video_id",
+        "id": "dWH8n-FkprM",
         "title": "Análise de Dados com Python e Planilhas Google",
         "thumbnail": "https://ytimg.com",
         "publishedAt": "2026-08-05T20:00:00Z",
         "duration": "PT22M35S"
       },
       {
-        "id": "v6_video_id",
+        "id": "bSp-foRDH5M",
         "title": "Novidades do Desenvolvimento Low-Code para 2026",
         "thumbnail": "https://ytimg.com",
         "publishedAt": "2026-08-01T13:00:00Z",
         "duration": "PT6M50S"
+      },
+      {
+        "id": "Sm7OTow3mcY",
+        "title": "Como Programar em Google Apps Script para Iniciantes",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-25T14:00:00Z",
+        "duration": "PT12M45S"
+      },
+      {
+        "id": "YSKzyVOQmuA",
+        "title": "Consumindo a API do YouTube v3 sem Mistérios",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-20T18:30:00Z",
+        "duration": "PT8M20S"
+      },
+      {
+        "id": "2jBT5mlomoE",
+        "title": "Dicas de Produtividade no Google Workspace",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-15T11:15:00Z",
+        "duration": "PT15M02S"
+      },
+      {
+        "id": "iDz4GqHQL6Q",
+        "title": "Criando uma API REST com Apps Script em 10 Minutos",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-10T09:00:00Z",
+        "duration": "PT10M11S"
+      },
+      {
+        "id": "TglEnUdBb3o",
+        "title": "Análise de Dados com Python e Planilhas Google",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-05T20:00:00Z",
+        "duration": "PT22M35S"
+      },
+      {
+        "id": "MfDYRK1pAvA",
+        "title": "Novidades do Desenvolvimento Low-Code para 2026",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-01T13:00:00Z",
+        "duration": "PT6M50S"
+      },
+      {
+        "id": "JJTdXTf12oQ",
+        "title": "Como Programar em Google Apps Script para Iniciantes",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-25T14:00:00Z",
+        "duration": "PT12M45S"
+      },
+      {
+        "id": "mx0xFpVjxHE",
+        "title": "Consumindo a API do YouTube v3 sem Mistérios",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-20T18:30:00Z",
+        "duration": "PT8M20S"
+      },
+      {
+        "id": "iGOmDRYctOw",
+        "title": "Dicas de Produtividade no Google Workspace",
+        "thumbnail": "https://ytimg.com",
+        "publishedAt": "2026-08-15T11:15:00Z",
+        "duration": "PT15M02S"
       }
     ]
   });
