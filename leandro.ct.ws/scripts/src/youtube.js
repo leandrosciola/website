@@ -98,7 +98,7 @@ function renderGallery(videos) {
     const card = document.createElement('article');
     card.innerHTML = `
       <div class="thumb">
-        <img src="https://img.youtube.com/vi/${video.id}/sddefault.jpg" width="369" height="208" alt="${video.title}" loading="lazy">
+        <img src="https://img.youtube.com/vi/${video.id}/mqdefault.jpg" alt="${video.title}" loading="lazy">
         <div class="play-icon"></div>
         <span class="duration">${formatDuration(video.duration)}</span>
       </div>
